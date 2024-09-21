@@ -1,0 +1,102 @@
+# Ignore virtual environment directory (replace "venv" with your virtual environment name if different)
+myvenv/
+env/
+.venv/
+
+# ignore api keys
+Key.py
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+*.wheel
+
+# PyInstaller
+# Usually these files are written by a python script from a template
+# before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Pytest cache
+.pytest_cache/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# VS Code
+.vscode/
+
+# Pycharm
+.idea/
+
+# MacOS specific files
+.DS_Store
+
+# Log files
+*.log
+
+# Ignore any other environment configuration files (optional)
+.env
+
+# Ignore media files: video and audio
+# Video files
+*.mp4
+*.m4v
+*.mkv
+*.webm
+*.avi
+*.mov
+*.wmv
+*.flv
+*.mpeg
+*.mpg
+*.3gp
+
+# Audio files
+*.mp3
+*.wav
+*.ogg
+*.flac
+*.aac
+*.wma
+*.m4a
+*.aiff
+*.aif
+*.opus
