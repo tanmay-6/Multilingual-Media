@@ -123,9 +123,9 @@ def write_srt_file(subtitle_list, file_name="translated_sub.srt"):
             srt_file.write("\n")
 
 if __name__ == "__main__":
-    srt_file_path = 'subtitle.srt'
-    srt_content = read_srt_file(srt_file_path)
-    segments = split_by_linebreak(srt_content)
+    srt_file_path = 'subtitle.srt' # Path to the .srt file
+    srt_content = read_srt_file(srt_file_path) # get content from srt
+    segments = split_by_linebreak(srt_content) 
 
     while(len(segments) > 0 and segments[-1] == ""):
         segments.pop()
