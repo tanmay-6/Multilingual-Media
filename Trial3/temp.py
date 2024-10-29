@@ -38,23 +38,37 @@ if __name__ == "__main__":
     model = genai.GenerativeModel(model_name="gemini-1.5-flash")
 
     # Read the text from the file
-    with open("transcription.txt", "r") as file:
-        text = file.read()
+    text = """
+    I think you already know that if you want
+    to improve your English speaking skills, you
+
+    have to practice, right?
+
+    You have to speak.
+
+    Studying grammar will never improve your speaking.
+
+    Listening to English alone will never improve
+    your speaking.
+
+    You have to actually speak.
+
+    """
 
     # Make the API call using the correct function 'model.generate'
     language, code = choose_language()
-    response = model.generate_content(f"Translate the following text into {language} Language:\n{text}")
-
+    response = model.generate_content(f"Translate the following text into {language} Language keep the line breaks intact:\n{text}")
+    print(response)
     try:
         translated_transcribe = response.candidates[0].content.parts[0].text
-        #print(type(translated_transcribe))
+        print(translated_transcribe)
         # Write the translated text to a new file
-        with open('translated_text.txt', 'w', encoding='utf-8') as file:
-            file.write(translated_transcribe)
+        # with open('translated_text.txt', 'w', encoding='utf-8') as file:
+        #     file.write(translated_transcribe)
     except Exception as e:
         print(f"Translation failed: {e}")
         exit(1)
     
-    generate_audio_from_transcript(translated_transcribe, code, "translated_audio.mp3")
-    print("Audio file generated successfully")
+    # generate_audio_from_transcript(translated_transcribe, code, "translated_audio.mp3")
+    # print("Audio file generated successfully")
     
