@@ -25,7 +25,7 @@ def add_audio_to_video(video_file, audio_file, output_file):
 
 # Example usage
 video_file = "Video.mp4"  # Replace with the path to your video file
-audio_file = "text_to_speech_audio.wav"  # Replace with the path to your audio file
-output_file = "output_with_audio.mp4"  # Desired output file
+audio_file = "translated_audio.wav"  # Replace with the path to your audio file
+output_file = "output_with_translated_audio.mp4"  # Desired output file
 
 add_audio_to_video(video_file, audio_file, output_file)

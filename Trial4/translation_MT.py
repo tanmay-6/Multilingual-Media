@@ -1,5 +1,5 @@
 from transformers import MarianMTModel, MarianTokenizer, pipeline
-from language_codes_MT import language_codes
+from language_codes_MB import language_codes
 
 
 def read_srt_file(file_path):
@@ -44,12 +44,12 @@ def translate_text(text, source_language, target_language):
     
     # Extract and print the translated text
     translated_text = translation[0]["translation_text"]
-    # print(f"Translation ({source_language} -> {target_language}):\n", translated_text)
+    print(f"Translation ({source_language} -> {target_language}):\n", translated_text)
     
     return translated_text
 
 def write_srt_file(subtitle_list, file_name="translated_sub.srt"):
-    output_file = 'translated_sub.srt'
+    output_file = file_name
 
     # Open the output .srt file for writing
     with open(output_file, 'w', encoding='utf-8') as srt_file:
