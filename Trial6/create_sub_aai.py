@@ -8,6 +8,6 @@ transcript = transcriber.transcribe("aud1.wav")
 
 subtitle = transcript.export_subtitles_srt()
 
-with open("subtitles.srt", "w") as f:
+with open("sub_aai.srt", "w") as f:
     f.write(subtitle)
 print(subtitle)
